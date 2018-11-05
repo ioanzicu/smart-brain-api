@@ -1,13 +1,12 @@
 const Clarifai = require('clarifai');
 
-const app = new Clarifai.App({apiKey: '3cda67ae0adb4ae6b169d3b5a3a7bb7a'});
+const app = new Clarifai.App({
+	apiKey: '483c084bdf4949bdb584236af42e2005'
+});
 
 const handleApiCall = (req, res) => {
-	console.log('req', req);
-	console.log('res', res);
-	if(!req.body.input) {
-		return res.status(400);
-	}
+	
+	console.log('res',res.body);
 	app.models
 		.predict(Clarifai.FACE_DETECT_MODEL, req.body.input)
 		.then(data => {
@@ -28,5 +27,5 @@ const handleImage = (req, res, db) => {
 }
 
 module.exports = { 
-	handleImage: handleImage,
-	handleApiCall: handleApiCall  }
+	handleImage,
+	handleApiCall  }

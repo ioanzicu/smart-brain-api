@@ -15,15 +15,22 @@ const db = knex({
 		connectionString: process.env.DATABASE_URL,
 		ssl: true
 	}
+	// client: 'pg',
+ //  	connection: {
+ //    	host : '127.0.0.1',
+ //    	user : 'postgres',
+ //    	password : '123',
+ //    	database : 'smart-brain'
+ //  }
 });
 
 const app = express();
 
-app.use(bodyParser.json());
 app.use(cors());
+app.use(bodyParser.json());
 
 // Root
-app.get('/', (req, res) => { res.send('it is working'); });
+app.get('/', (req, res) => { res.send(database.users); });
 
 // Sign In
 app.post('/signin', (req, res) => { signin.handleSignin(req, res, db, bcrypt) });
