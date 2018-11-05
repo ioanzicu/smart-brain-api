@@ -30,7 +30,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Root
-app.get('/', (req, res) => { res.send(database.users); });
+app.get('/', (req, res) => { res.send('It\'s working'); });
 
 // Sign In
 app.post('/signin', (req, res) => { signin.handleSignin(req, res, db, bcrypt) });
