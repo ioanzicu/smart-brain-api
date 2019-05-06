@@ -1,6 +1,9 @@
 {
   "name": "smart-brain-api",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.x"
+  },
   "description": "",
   "main": "script.js",
   "scripts": {
@@ -10,7 +13,6 @@
   "author": "Ioan Zicu",
   "license": "ISC",
   "dependencies": {
-    "node": "10.x",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
     "clarifai": "^2.9.0",
