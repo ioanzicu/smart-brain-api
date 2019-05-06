@@ -10,7 +10,7 @@
   "author": "Ioan Zicu",
   "license": "ISC",
   "dependencies": {
-    "npm version": "6.4.1",
+    "node": "10.x",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
     "clarifai": "^2.9.0",
