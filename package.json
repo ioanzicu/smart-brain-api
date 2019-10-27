@@ -8,7 +8,7 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ioan Zicu",
@@ -20,6 +20,7 @@
     "cors": "^2.8.4",
     "express": "^4.16.4",
     "knex": "^0.19.5",
+    "morgan": "^1.9.1",
     "pg": "^7.6.0"
   },
   "devDependencies": {
